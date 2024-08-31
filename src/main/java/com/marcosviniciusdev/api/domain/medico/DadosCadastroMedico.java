@@ -1,6 +1,6 @@
-package com.marcosviniciusdev.api.medico;
+package com.marcosviniciusdev.api.domain.medico;
 
-import com.marcosviniciusdev.api.endereco.DadosEndereco;
+import com.marcosviniciusdev.api.domain.endereco.DadosEndereco;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;

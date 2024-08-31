@@ -1,6 +1,6 @@
-package com.marcosviniciusdev.api.medico;
+package com.marcosviniciusdev.api.domain.medico;
 
-import com.marcosviniciusdev.api.endereco.Endereco;
+import com.marcosviniciusdev.api.domain.endereco.Endereco;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;

@@ -1,4 +1,4 @@
-package com.marcosviniciusdev.api.medico;
+package com.marcosviniciusdev.api.domain.medico;
 
 public record DadosListagemMedico(Long id, String nome, String email, String crm, Especialidade especialidade, Boolean ativo) {
     public DadosListagemMedico(Medico medico) {

@@ -1,4 +1,4 @@
-package com.marcosviniciusdev.api.medico;
+package com.marcosviniciusdev.api.domain.medico;
 
 public enum Especialidade {
     ORTOPEDIA,

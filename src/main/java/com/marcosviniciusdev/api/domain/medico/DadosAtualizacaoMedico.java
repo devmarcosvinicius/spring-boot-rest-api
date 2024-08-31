@@ -1,4 +1,4 @@
-package com.marcosviniciusdev.api.medico;
+package com.marcosviniciusdev.api.domain.medico;
 
 import jakarta.validation.constraints.NotNull;
 
