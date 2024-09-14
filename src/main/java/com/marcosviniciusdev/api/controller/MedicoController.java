@@ -1,6 +1,7 @@
 package com.marcosviniciusdev.api.controller;
 
 import com.marcosviniciusdev.api.domain.medico.*;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,6 +14,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 @RestController
 @RequestMapping("/medicos")
+@SecurityRequirement(name = "bearer-key")
 public class MedicoController {
 
     @Autowired
@@ -24,7 +26,7 @@ public class MedicoController {
         var medico = new Medico(dados);
         repository.save(medico);
 
-        var uri =  uriBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
+        var uri = uriBuilder.path("/medicos/{id}").buildAndExpand(medico.getId()).toUri();
 
         return ResponseEntity.created(uri).body(new DadosDetalhamentoMedico(medico));
     }

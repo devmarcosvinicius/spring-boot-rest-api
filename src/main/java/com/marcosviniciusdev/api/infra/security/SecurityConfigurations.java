@@ -30,6 +30,7 @@ public class SecurityConfigurations {
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)) // Set session management policy to stateless
                 .authorizeHttpRequests(authz -> authz
                         .requestMatchers(HttpMethod.POST, "/login").permitAll() // Permit all POST requests to /login
+                        .requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll() // Permit all POST requests to /login
                         .anyRequest().authenticated() // All other requests need to be authenticated
                 )
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
